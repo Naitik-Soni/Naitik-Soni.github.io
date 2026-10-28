@@ -90,9 +90,9 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <section class="hero" id="top">
 <div>
 <h1>Naitik<br>Soni</h1>
-<p class="lede">I build computer vision systems that read documents and watch video.</p>
+<p class="lede">Cameras record everything. I build the vision systems that make sense of it.</p>
 <div class="btns">
-<a class="btn solid" href="#" id="resume">Download resume</a>
+<a class="btn solid" href="https://drive.google.com/file/d/1ZEgLfNhXZMylCvHw33HFPiU1GWGJ2crR/view?usp=sharing" id="resume">Download resume</a>
 <a class="btn" href="https://github.com/Naitik-Soni">GitHub</a>
 <a class="btn" href="https://www.linkedin.com/in/naitiktsoni">LinkedIn</a>
 </div>
@@ -106,9 +106,8 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <section class="sec" id="about">
 <h2>About</h2>
 <div>
-<p class="big">I’m a Junior Programmer at Silver Touch Technologies in Ahmedabad, working on computer vision and AI projects in production.</p>
+<p class="big">I’m a Junior Programmer at Silver Touch Technologies in Ahmedabad, working on Document and AI projects.</p>
 <p>I learn by building. Most of what is on this page started as a question I wanted to answer myself, and I write down what I find along the way.</p>
-<p>Long term, I want to build my own AI and computer vision products.</p>
 </div>
 </section>
 
@@ -118,12 +117,14 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <h3>Document intelligence for complex scanned documents</h3>
 <p class="meta">Silver Touch Technologies, about a year of R&amp;D and solution development</p>
 <p>A client’s scanned documents run from 2 to 200 pages, and the data I needed sits in a different place on every one. It was being entered by hand, at 50–100 documents a day.</p>
-<p>I benchmarked multiple OCR and LLM/VLM models. Retrieval-style approaches turned out to be a poor fit, because this is structured extraction from variable layouts, not search. I built a custom pipeline that combines DocTR for text accuracy with Docling for layout accuracy, then moved to a VLM for more accurate extraction of the target data.</p>
+<p>I led the R&amp;D on document image processing and OCR, testing different methods against these documents and benchmarking multiple OCR and LLM/VLM models. Retrieval-style approaches turned out to be a poor fit, because this is structured extraction from variable layouts, not search. I built a custom pipeline that combines DocTR for text accuracy with Docling for layout accuracy, then moved to a VLM for more accurate extraction of the target data.</p>
 <div class="nums">
 <div><b>60–70%</b>fewer low-confidence OCR boxes after I added a VLM verification layer, at some extra compute cost</div>
 <div><b>~1 year</b>of R&amp;D from first benchmarks to the working solution</div>
 </div>
 <div class="also">
+<p><b>Document image processing R&amp;D.</b> Researched and compared pipelines to get more accurate OCR from scanned pages.</p>
+<p><b>Document analysis problem-solving.</b> Tried different OCR and layout methods on real documents to find what actually worked.</p>
 <p><b>Signature detection.</b> Fine-tuned YOLOv8 to find signatures on document images.</p>
 <p><b>OCR microservices.</b> Document image processing and OCR pipelines served through FastAPI.</p>
 </div>
@@ -135,8 +136,7 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <div>
 <div class="proj main"><h3>Retail Footfall Analytics</h3><div><p>Counts people in retail video. YOLOv8 detects, BoT-SORT tracks, a line-crossing counter logs entries, and an hourly delta-bucketing aggregator feeds CSV output and an interactive Plotly dashboard.</p><div class="tools">YOLOv8, BoT-SORT, Plotly</div></div></div>
 <div class="proj"><h3>Multi-tenant attendance system</h3><div><p>Camera-based attendance using RetinaFace for detection and ArcFace for recognition. I designed the full architecture: high-level design, low-level design and database schema.</p><div class="tools">RetinaFace, ArcFace</div></div></div>
-<div class="proj"><h3>Multi-camera person tracking</h3><div><p>Following the same person across several cameras, tested on my own five-camera home setup. I started it to learn, apply and build something unique.</p><div class="tools">Multi-target multi-camera tracking</div><span class="tag">In progress</span></div></div>
-<div class="proj"><h3>Pharma document pipeline</h3><div><p>Page extraction with PaddleOCR 3.x and document similarity scored by OCR-based Jaccard text overlap. A scoped design extends it to separate logos and illustrations from text on medicine packaging.</p><div class="tools">PaddleOCR, CLIP, SAM</div></div></div>
+<div class="proj"><h3>Document pipeline</h3><div><p>Page extraction with PaddleOCR 3.x and document similarity scored by OCR-based Jaccard text overlap. A scoped design extends it to separate logos and illustrations from text on medicine packaging.</p><div class="tools">PaddleOCR, CLIP, OpenCV</div></div></div>
 <div class="proj"><h3>DandvatNet</h3><div><p>A prototype repetition counter for the dandvat exercise. Phone accelerometer and gyroscope data streams over WebSocket into a Random Forest classifier.</p><div class="tools">IMU sensors, WebSocket, Random Forest</div></div></div>
 </div>
 </section>
@@ -162,9 +162,9 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <div class="journey">
 <section class="page">
 <h1>Journey</h1>
-<p class="lede" style="font-size:18px">[Challenge name goes here]. One line per day, with the full story on Medium.</p>
+<p class="lede" style="font-size:18px">Computer vision Engineer. One line per day, with the full story on Medium.</p>
 <ul class="log">
-<li><div class="n">Day 1</div><div><p>[Your one-line summary of Day 1 goes here]</p><a href="#">Read on Medium</a></div></li>
+<!-- <li><div class="n">Day 1</div><div><p>[Your one-line summary of Day 1 goes here]</p><a href="#">Read on Medium</a></div></li> -->
 </ul>
 </section>
 </div>
