@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Naitik Soni — Computer vision and AI</title>
+<title>Naitik Soni — AI / Computer Vision Engineer</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
 <style>
 :root{--bg:#000;--fg:#fff;--mute:#9a9a9a;--line:#2b2b2b;--soft:#141414;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -19,9 +19,10 @@ body[data-view="journey"] .home,body:not([data-view="journey"]) .journey{display
 nav{position:sticky;top:12px;z-index:5;margin:12px auto 0;width:fit-content;max-width:calc(100% - 24px);display:flex;gap:4px;flex-wrap:wrap;justify-content:center;padding:6px;border:1px solid var(--line);border-radius:999px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);font-size:14px;font-weight:500}
 nav a{text-decoration:none;color:var(--mute);padding:6px 14px;border-radius:999px}
 nav a:hover{color:var(--fg);background:var(--soft)}
-main{max-width:1080px;margin:0 auto;padding:0 24px}
+main{max-width:none;margin:0;padding:0 max(24px,calc((100vw - 1080px) * .3))}
 .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end;padding:72px 0 40px}
 h1{font-weight:800;font-size:clamp(64px,13vw,160px);line-height:.88;letter-spacing:-.045em;margin:0 0 28px}
+.role{font-size:18px;font-weight:500;color:var(--mute);margin:-8px 0 22px}
 .lede{font-size:clamp(22px,3vw,30px);line-height:1.3;max-width:560px;margin:0 0 28px}
 .btns{display:flex;gap:10px;flex-wrap:wrap}
 .btn{display:inline-block;border:1.5px solid var(--fg);border-radius:999px;padding:11px 22px;font-size:15px;font-weight:500;text-decoration:none}
@@ -41,9 +42,9 @@ h1{font-weight:800;font-size:clamp(64px,13vw,160px);line-height:.88;letter-spaci
 .sec p.big{font-size:clamp(24px,3.2vw,34px);line-height:1.3}
 h3{font-size:clamp(26px,3.4vw,38px);line-height:1.1;letter-spacing:-.02em;margin:0 0 6px;font-weight:800}
 .meta{color:var(--mute);margin:0 0 22px!important}
-.nums{display:flex;gap:40px;flex-wrap:wrap;margin:26px 0 30px}
-.nums div{max-width:230px;font-size:16px;line-height:1.4;color:var(--mute)}
-.nums b{display:block;font:800 52px/1 "Bricolage Grotesque",system-ui,sans-serif;color:var(--fg);letter-spacing:-.03em;margin-bottom:8px}
+.nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:26px 0 30px}
+.nums div{font-size:16px;line-height:1.4;color:var(--mute)}
+.nums b{display:block;font:800 clamp(30px,3vw,44px)/1 "Bricolage Grotesque",system-ui,sans-serif;color:var(--fg);letter-spacing:-.03em;margin-bottom:8px}
 .also{border-top:1px solid var(--line);padding-top:20px;display:grid;gap:14px;max-width:660px}
 .also p{margin:0;font-size:17px}.also b{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:500}
 .proj{display:grid;grid-template-columns:1fr 1.3fr;gap:12px 36px;padding:28px 0;border-top:1px solid var(--line)}
@@ -52,6 +53,7 @@ h3{font-size:clamp(26px,3.4vw,38px);line-height:1.1;letter-spacing:-.02em;margin
 .proj.main h3{font-size:clamp(30px,4vw,46px)}
 .proj p{font-size:17px;margin:0 0 10px}
 .tools{color:var(--mute);font-size:15px}
+.links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font:500 15px "Bricolage Grotesque",system-ui,sans-serif}
 .tag{display:inline-block;font:500 12px "Bricolage Grotesque",system-ui,sans-serif;border:1px solid var(--mute);border-radius:999px;padding:1px 10px;margin-top:8px;color:var(--mute)}
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .skills h3{font-size:20px;margin-bottom:8px}.skills p{font-size:17px;color:var(--mute);margin:0}
@@ -59,10 +61,11 @@ h3{font-size:clamp(26px,3.4vw,38px);line-height:1.1;letter-spacing:-.02em;margin
 .page{padding:48px 0 24px;max-width:680px}
 .page h1{font-size:clamp(34px,5vw,44px);line-height:1;letter-spacing:-.03em;margin-bottom:10px}
 .log{list-style:none;margin:28px 0 0;padding:0}
-.log li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
-.log .n{font:500 15px/1.6 "Bricolage Grotesque",system-ui,sans-serif;color:var(--mute)}
-.log a{font-size:15px}
-.log p{font-size:17px;line-height:1.45;margin:0 0 4px}
+.log li{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.log .n{font:800 20px/1.2 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:-.01em}
+.log .n small{display:block;margin-top:4px;font:500 14px/1.4 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:0;color:var(--mute)}
+.log a{font:500 15px "Bricolage Grotesque",system-ui,sans-serif}
+.log p{font-size:19px;line-height:1.45;margin:0 0 6px}
 .scene{--s:58px;--n:19;position:relative;height:170px;overflow:hidden;perspective:1100px;perspective-origin:50% 30%;border-top:1px solid var(--line)}
 .scene::after{content:"";position:absolute;left:0;right:0;bottom:34px;border-top:1.5px dashed var(--line)}
 .world{position:absolute;left:0;bottom:34px;width:100%;height:var(--s);transform-style:preserve-3d;transform:rotateX(-24deg);transform-origin:50% 100%}
@@ -77,8 +80,9 @@ h3{font-size:clamp(26px,3.4vw,38px);line-height:1.1;letter-spacing:-.02em;margin
 @keyframes roll{to{transform:rotateZ(90deg)}}
 @media(max-width:760px){.scene{--s:44px;--n:9}}
 @media (prefers-reduced-motion:reduce){.scene *{animation:none!important}.mover,.track{transform:translateX(calc(var(--s)*4))}}
-footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px solid var(--line);color:var(--mute);font-size:15px}
-@media(max-width:760px){.hero{grid-template-columns:1fr;gap:32px;padding-top:44px}.photo{max-width:340px}.sec{grid-template-columns:1fr;gap:16px;padding:52px 0}.proj{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.log li{grid-template-columns:60px 1fr;gap:12px}body{font-size:18px}}
+footer{max-width:none;margin:0;padding:30px max(24px,calc((100vw - 1080px) * .3)) 48px;border-top:1px solid var(--line);color:var(--mute);font-size:15px}
+@media(max-width:980px){.nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:32px;padding-top:44px}.photo{max-width:340px}.sec{grid-template-columns:1fr;gap:16px;padding:52px 0}.proj{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.log li{grid-template-columns:84px 1fr;gap:12px}body{font-size:18px}}
 </style>
 </head>
 <body data-view="home">
@@ -90,9 +94,10 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <section class="hero" id="top">
 <div>
 <h1>Naitik<br>Soni</h1>
+<p class="role disp">AI / Computer Vision Engineer · Vision Systems</p>
 <p class="lede">Cameras record everything. I build the vision systems that make sense of it.</p>
 <div class="btns">
-<a class="btn solid" href="https://drive.google.com/file/d/1YN5YMH7Z2o5XWWjKiOHuPcJooV0fiHzx/view?usp=sharing" id="resume">Download resume</a>
+<a class="btn solid" href="https://drive.google.com/file/d/1fBqeSfgZ0fNHGsq8aiV1rh_avCEEpG30/view?usp=sharing" id="resume">Download resume</a>
 <a class="btn" href="https://github.com/Naitik-Soni">GitHub</a>
 <a class="btn" href="https://www.linkedin.com/in/naitiktsoni">LinkedIn</a>
 </div>
@@ -106,27 +111,30 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <section class="sec" id="about">
 <h2>About</h2>
 <div>
-<p class="big">I’m a Junior Programmer at Silver Touch Technologies in Ahmedabad, working on Document and AI projects.</p>
+<p class="big">I’m an AI and computer vision engineer at Silver Touch Technologies in Ahmedabad, with 2+ years of experience in R&amp;D and development of vision systems, from document AI to detection, tracking and face recognition.</p>
 <p>I learn by building. Most of what is on this page started as a question I wanted to answer myself, and I write down what I find along the way.</p>
 </div>
 </section>
 
 <section class="sec" id="work">
-<h2>Work in production</h2>
+<h2>Experience</h2>
 <div>
 <h3>Document intelligence for complex scanned documents</h3>
-<p class="meta">Silver Touch Technologies, about a year of R&amp;D and solution development</p>
-<p>A client’s scanned documents run from 2 to 200 pages, and the data I needed sits in a different place on every one. It was being entered by hand, at 50–100 documents a day.</p>
-<p>I led the R&amp;D on document image processing and OCR, testing different methods against these documents and benchmarking multiple OCR and LLM/VLM models. Retrieval-style approaches turned out to be a poor fit, because this is structured extraction from variable layouts, not search. I built a custom pipeline that combines DocTR for text accuracy with Docling for layout accuracy, then moved to a VLM for more accurate extraction of the target data.</p>
+<p class="meta">Programmer (Computer Vision &amp; AI R&amp;D), Silver Touch Technologies, Jul 2024 to present. 1+ year of R&amp;D and development</p>
+<p>A client’s scanned documents run from 2 to 200 pages, and the data I needed sits in a different place on every one. Each document took 5 minutes to 1 hour to process by hand.</p>
+<p>I led the R&amp;D on document image processing and OCR, testing different methods against these documents and benchmarking multiple OCR and LLM/VLM models. Retrieval-style approaches turned out to be a poor fit, because this is structured extraction from variable layouts, not search. I built a custom pipeline that combines DocTR for text accuracy with Docling for layout accuracy, then moved to a VLM for more accurate extraction of the target data. The system now processes 200+ documents a day with no human intervention and no manual correction.</p>
 <div class="nums">
+<div><b>200+</b>documents processed per day with no human intervention</div>
+<div><b>0</b>manual corrections needed after extraction moved to a VLM</div>
 <div><b>60–70%</b>fewer low-confidence OCR boxes after I added a VLM verification layer, at some extra compute cost</div>
-<div><b>~1 year</b>of R&amp;D from first benchmarks to the working solution</div>
+<div><b>1+ year</b>of R&amp;D from first benchmarks to the working solution</div>
 </div>
 <div class="also">
 <p><b>Document image processing R&amp;D.</b> Researched and compared pipelines to get more accurate OCR from scanned pages.</p>
 <p><b>Document analysis problem-solving.</b> Tried different OCR and layout methods on real documents to find what actually worked.</p>
 <p><b>Signature detection.</b> Fine-tuned YOLOv8 to find signatures on document images.</p>
-<p><b>OCR microservices.</b> Document image processing and OCR pipelines served through FastAPI.</p>
+<p><b>OCR microservices.</b> Document image processing and OCR pipelines exposed as FastAPI microservices.</p>
+<p><b>Software Trainee Engineer, Jan to Jun 2024.</b> Automated a repetitive manual weekly data workflow with a Python RPA bot, and owned the data pipeline (collection, labelling, training) for a self-driving car prototype that reached over 90% accuracy in simulation.</p>
 </div>
 </div>
 </section>
@@ -134,27 +142,27 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <section class="sec" id="projects">
 <h2>Projects</h2>
 <div>
-<div class="proj main"><h3>Retail Footfall Analytics</h3><div><p>Counts people in retail video. YOLOv8 detects, BoT-SORT tracks, a line-crossing counter logs entries, and an hourly delta-bucketing aggregator feeds CSV output and an interactive Plotly dashboard.</p><div class="tools">YOLOv8, BoT-SORT, Plotly</div></div></div>
-<div class="proj"><h3>Multi-tenant attendance system</h3><div><p>Camera-based attendance using RetinaFace for detection and ArcFace for recognition. I designed the full architecture: high-level design, low-level design and database schema.</p><div class="tools">RetinaFace, ArcFace</div></div></div>
+<div class="proj main"><h3>Retail Footfall Analytics</h3><div><p>Replaces manual entry and exit counting in retail video. A config-driven pipeline: YOLOv8 detects, BoT-SORT tracks, and a configurable line-crossing counter logs entries and exits. An hourly delta-bucketing aggregator feeds automated CSV reports and an interactive Plotly dashboard.</p><div class="tools">YOLOv8, BoT-SORT, OpenCV, Plotly</div><div class="links"><a href="https://github.com/Naitik-Soni/Retail-Footfall-Analytics">GitHub</a></div></div></div>
+<div class="proj"><h3>Multi-camera attendance system</h3><div><p>Replaces manual attendance with automatic face-based marking from multiple cameras. I designed the full architecture: high-level design, low-level design, database schema and a face_service / main_app microservice split. RetinaFace detects and ArcFace recognizes, chosen after an accuracy-latency tradeoff analysis, with role-based access and defined API contracts.</p><div class="tools">RetinaFace, ArcFace, FastAPI, OpenCV</div><div class="links"><a href="https://github.com/Naitik-Soni/Smart-Attendance-System">GitHub</a></div></div></div>
+<div class="proj"><h3>Hand gesture cricket runs counter</h3><div><p>A real-time system that recognizes hand gestures from a camera feed and counts them as cricket runs automatically.</p><div class="tools">Python, OpenCV</div><div class="links"><a href="https://github.com/Naitik-Soni/Hand-cricket-runs-counter">GitHub</a><a href="https://www.youtube.com/watch?v=Auu9x8YpsQE">Demo</a></div></div></div>
 <div class="proj"><h3>Document pipeline</h3><div><p>Page extraction with PaddleOCR 3.x and document similarity scored by OCR-based Jaccard text overlap. A scoped design extends it to separate logos and illustrations from text on medicine packaging.</p><div class="tools">PaddleOCR, CLIP, OpenCV</div></div></div>
-<div class="proj"><h3>DandvatNet</h3><div><p>A prototype repetition counter for the dandvat exercise. Phone accelerometer and gyroscope data streams over WebSocket into a Random Forest classifier.</p><div class="tools">IMU sensors, WebSocket, Random Forest</div></div></div>
 </div>
 </section>
 
 <section class="sec" id="skills">
 <h2>Skills</h2>
 <div class="skills">
-<div><h3>Vision</h3><p>YOLOv8, object tracking, face recognition, OCR, document layout analysis</p></div>
-<div><h3>Models</h3><p>VLMs, CLIP, SAM and MobileSAM, Random Forest, fine-tuning</p></div>
-<div><h3>Engineering</h3><p>Python, FastAPI, microservices, system design, Plotly</p></div>
+<div><h3>Vision</h3><p>OpenCV, YOLOv8, object detection, BoT-SORT tracking, face recognition (RetinaFace, ArcFace), OCR (Tesseract, DocTR, Docling), document layout analysis</p></div>
+<div><h3>Models</h3><p>VLMs, CLIP, SAM and MobileSAM, TensorFlow, CNNs, Random Forest, fine-tuning</p></div>
+<div><h3>Engineering</h3><p>Python, FastAPI, microservices, REST APIs, PostgreSQL, system design, Git, Plotly</p></div>
 </div>
 </section>
 
 <section class="sec" id="contact">
 <h2>Contact</h2>
 <div>
-<p class="talk disp">Let’s talk about computer vision.</p>
-<div class="btns"><a class="btn solid" href="https://www.linkedin.com/in/naitiktsoni">LinkedIn</a><a class="btn" href="https://github.com/Naitik-Soni">GitHub</a></div>
+<p>Email me or message me on LinkedIn.</p>
+<div class="btns"><a class="btn solid" href="https://www.linkedin.com/in/naitiktsoni">LinkedIn</a><a class="btn" href="mailto:naitiksoni1705@gmail.com">Email</a><a class="btn" href="https://github.com/Naitik-Soni">GitHub</a></div>
 </div>
 </section>
 </div>
@@ -162,15 +170,28 @@ footer{max-width:1080px;margin:0 auto;padding:30px 24px 48px;border-top:1px soli
 <div class="journey">
 <section class="page">
 <h1>Journey</h1>
-<p class="lede" style="font-size:18px">Computer vision Engineer. One line per day, with the full story on Medium.</p>
-<ul class="log">
-<!-- <li><div class="n">Day 1</div><div><p>[Your one-line summary of Day 1 goes here]</p><a href="#">Read on Medium</a></div></li> -->
-</ul>
+<p class="lede" style="font-size:20px;max-width:560px">My daily log of learning and building in computer vision and AI. I write on Medium every day to build experience and stay consistent.</p>
+<ul class="log" id="log"></ul>
 </section>
 </div>
 </main>
 <footer>Naitik Soni, Ahmedabad, India</footer>
 <script>
+// Add one line per day here. Add a url once the Medium post is live.
+var posts=[
+  {day:1,date:'30 Oct 2026',text:'Linear Algebra — Vectors, Matrices',url:'https://medium.com/@naitiksoni1705/day-1-linear-algebra-vectors-matrices-f892233c7d98'}
+];
+(function(){
+  var ul=document.getElementById('log');
+  posts.slice().reverse().forEach(function(p){
+    var li=document.createElement('li'),n=document.createElement('div'),d=document.createElement('div'),t=document.createElement('p');
+    n.className='n';n.textContent='Day '+p.day;
+    var sm=document.createElement('small');sm.textContent=p.date;n.appendChild(sm);
+    t.textContent=p.text;d.appendChild(t);
+    if(p.url){var a=document.createElement('a');a.href=p.url;a.textContent='Read on Medium';d.appendChild(a)}
+    li.appendChild(n);li.appendChild(d);ul.appendChild(li);
+  });
+})();
 function route(){
   var h=location.hash.slice(1);
   document.body.setAttribute('data-view',h==='journey'?'journey':'home');
