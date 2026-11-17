@@ -66,6 +66,13 @@ h3{font-size:clamp(26px,3.4vw,38px);line-height:1.1;letter-spacing:-.02em;margin
 .log .n small{display:block;margin-top:4px;font:500 14px/1.4 "Bricolage Grotesque",system-ui,sans-serif;letter-spacing:0;color:var(--mute)}
 .log a{font:500 15px "Bricolage Grotesque",system-ui,sans-serif}
 .log p{font-size:19px;line-height:1.45;margin:0 0 6px}
+.log{list-style:none;margin:28px 0 0;padding:0}
+.log li{display:grid;grid-template-columns:80px 1.1fr 1.6fr;gap:20px;padding:16px 0;border-top:1px solid var(--line);align-items:baseline}
+.log li.head{padding:10px 0;font:500 13px "Bricolage Grotesque",system-ui,sans-serif;color:var(--mute)}
+.log .day{font:800 17px/1.3 "Bricolage Grotesque",system-ui,sans-serif}
+.log .title{font:500 17px/1.35 "Bricolage Grotesque",system-ui,sans-serif}
+.log .title a{text-decoration:underline;text-underline-offset:3px}
+.log .desc{font-size:17px;line-height:1.45;color:var(--mute);margin:0}
 .scene{--s:58px;--n:19;position:relative;height:170px;overflow:hidden;perspective:1100px;perspective-origin:50% 30%;border-top:1px solid var(--line)}
 .scene::after{content:"";position:absolute;left:0;right:0;bottom:34px;border-top:1.5px dashed var(--line)}
 .world{position:absolute;left:0;bottom:34px;width:100%;height:var(--s);transform-style:preserve-3d;transform:rotateX(-24deg);transform-origin:50% 100%}
@@ -179,17 +186,19 @@ footer{max-width:none;margin:0;padding:30px max(24px,calc((100vw - 1080px) * .3)
 <script>
 // Add one line per day here. Add a url once the Medium post is live.
 var posts=[
-  {day:1,date:'30 Oct 2026',text:'Linear Algebra — Vectors, Matrices',url:'https://medium.com/@naitiksoni1705/day-1-linear-algebra-vectors-matrices-f892233c7d98'}
+  {day:1,title:'Linear Algebra — Vectors, Matrices',desc:'Vectors and matrices, the basic objects behind how models handle data.',url:'https://medium.com/@naitiksoni1705/day-1-linear-algebra-vectors-matrices-f892233c7d98'}
 ];
 (function(){
   var ul=document.getElementById('log');
+  function cell(cls,txt){var d=document.createElement('div');d.className=cls;d.textContent=txt;return d}
+  var h=document.createElement('li');h.className='head';
+  h.appendChild(cell('','Day'));h.appendChild(cell('','Title'));h.appendChild(cell('','Description'));
+  ul.appendChild(h);
   posts.slice().reverse().forEach(function(p){
-    var li=document.createElement('li'),n=document.createElement('div'),d=document.createElement('div'),t=document.createElement('p');
-    n.className='n';n.textContent='Day '+p.day;
-    var sm=document.createElement('small');sm.textContent=p.date;n.appendChild(sm);
-    t.textContent=p.text;d.appendChild(t);
-    if(p.url){var a=document.createElement('a');a.href=p.url;a.textContent='Read on Medium';d.appendChild(a)}
-    li.appendChild(n);li.appendChild(d);ul.appendChild(li);
+    var li=document.createElement('li'),t=cell('title','');
+    if(p.url){var a=document.createElement('a');a.href=p.url;a.textContent=p.title;t.appendChild(a)}else{t.textContent=p.title}
+    li.appendChild(cell('day','Day '+p.day));li.appendChild(t);li.appendChild(cell('desc',p.desc));
+    ul.appendChild(li);
   });
 })();
 function route(){
